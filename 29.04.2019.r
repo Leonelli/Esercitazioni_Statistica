@@ -10,24 +10,28 @@
 
 
     zmax<- (Xmax-mu)/sigma
-    zmax
+    #zmax
     pr_max<-pnorm(zmax);
-    pr_max
+    #pr_max
 
     zmin<- (Xmin-mu)/sigma
-    zmin
+    #zmin
     pr_min<-pnorm(zmin);
-    pr_min
+    #pr_min
 
     #1. Qual è la probabilità che una caramella sia sopra il peso soglia?
     peso_sup<-1-pr_max;
-
+    peso_sup
+    fractions(1-pr_max)
+    
     #2.  In media, ogni quante caramelle se ne presenta una da scartare?
     peso_inf<-pr_min;
     scartare<- (peso_sup + peso_inf);
-    scartare
+    1/scartare;
+    fractions(1/scartare);
 
     #3. Qual è il valore standardizzato corrispondente a 4.5016385?
     X<-4.5016385;
     z<- (X-mu)/sigma;
     z
+    fractions(z)
