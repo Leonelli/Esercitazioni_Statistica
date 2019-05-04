@@ -18,6 +18,9 @@ p3<-0.10
 p4<-0.26
 p5<-0.27
 
+probabilità <- c(0.17, 0.20, 0.10, 0.26, 0.27);
+
+
 #1. Calcolare il valore atteso di X
 valore_atteso <- 1.00*0.17 + 2.00*0.20 + 3.00*0.10 + 4.00*0.26 + 5.00*0.27;
 valore_atteso;
@@ -36,8 +39,15 @@ momento_terzo_centrato;
 #μr = E(X^r)
 #Y<-2.5*X;
 k<-2.5;
-mu <- ((k*x1)*p1)^3 + ((k*x2)*p2)^3 + ((k*x3)*p3)^3 + ((k*x4)*p4)^3 + ((k*x5)*p5)^3;
+mu <- ((k*x1^3)*p1) + ((k*x2^3)*p2) + ((k*x3^3)*p3) + ((k*x4^3)*p4) + ((k*x5^3)*p5);
 mu
+
+prova <- 0;
+for(i in 1:5){
+    prova = prova + k^3*(probabilità[i]*i^3);
+}
+prova;
+
 
 #4. Probabilità condizionata 
 #Supponiamo ora che siamo due amici, 
@@ -45,4 +55,4 @@ mu
 #siccome abbiamo una sola moneta, tiriamo a sorte a chi tocca. 
 #La moneta è equilibrata. Io punto su testa. Qual è la probabilità che io ottenga la pallina con il numero 5?
 
-p5;
+p5*0.5;

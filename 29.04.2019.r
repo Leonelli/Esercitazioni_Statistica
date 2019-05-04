@@ -10,14 +10,14 @@
 
 
     zmax<- (Xmax-mu)/sigma
-    #zmax
+    zmax
     pr_max<-pnorm(zmax);
-    #pr_max
+    pr_max
 
     zmin<- (Xmin-mu)/sigma
-    #zmin
+    zmin
     pr_min<-pnorm(zmin);
-    #pr_min
+    pr_min
 
     #1. Qual è la probabilità che una caramella sia sopra il peso soglia?
     peso_sup<-1-pr_max;
