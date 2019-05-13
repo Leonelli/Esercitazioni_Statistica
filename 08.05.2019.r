@@ -25,16 +25,32 @@ Y;
 k <- 1/45;
 1/X == 1/Y;
 1/X == k;
+k;
+fractions(k);
 
 #2. Calcolare la distribuzione di probabilità marginale di X. Inserire il solo valore di probabilità per X=3.82.
 
 X3*k;
+fractions(X3*k);
 
 #3. Calcolare la distribuzione di probabilità marginale di Y. Inserire il solo valore di probabilità per Y=1.21.
 
 Y3*k;
+fractions(Y3*k);
 
 #4. Calcolare il valore atteso di X.
-0.56*X1*k + 1.3*X2*k + 3.82*X3*k;
+valore_attesoX<-0.56*X1*k + 1.3*X2*k + 3.82*X3*k;
+valore_attesoX;
+fractions(valore_attesoX)
 
 #5. Calcolare la varianza di Y.
+
+valore_attesoY<- -0.32*Y1*k + 1.18*Y2*k + 1.21*Y3*k;
+
+valore_attesoY2<- (-0.32)^2*(Y1*k) + (1.18)^2*(Y2*k) + (1.21)^2*(Y3*k);
+
+varianzaY <- valore_attesoY2 - valore_attesoY^2;
+
+varianzaY;
+fractions(varianzaY)
+
